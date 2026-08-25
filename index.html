@@ -1,187 +1,222 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Масштабирование VIP — годовая онлайн-программа Алекса Яновского</title>
-<meta name="description" content="Годовая онлайн-программа «Масштабирование VIP». Внедри систему управления, которая поможет увеличить обороты бизнеса. Оставь заявку — куратор свяжется и расскажет подробнее.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Масштабирование VIP — годовая онлайн-программа Алекса Яновского</title>
+  <meta name="description"
+    content="Годовая онлайн-программа «Масштабирование VIP». Внедри систему управления, которая поможет увеличить обороты бизнеса. Оставь заявку — куратор свяжется и расскажет подробнее.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto+Condensed:ital,wght@0,400;0,500;0,700;1,400&family=Golos+Text:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto+Condensed:ital,wght@0,400;0,500;0,700;1,400&family=Golos+Text:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
 
-<link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
-<header class="hero" id="top">
-  <div class="hero__inner">
-    <div class="video-cover" id="videoCover">
-      <img
-        class="video-cover__poster"
-        id="videoPoster"
-        src="https://img.youtube.com/vi/fa-DIfjbbPg/maxresdefault.jpg"
-        onerror="this.onerror=null;this.src='https://img.youtube.com/vi/fa-DIfjbbPg/hqdefault.jpg';"
-        alt="Как захватить 50% рынка — видео Алекса Яновского">
-      <div class="video-cover__tint" aria-hidden="true"></div>
-      <button class="video-cover__play" id="playButton" type="button" aria-label="Смотреть видео">
-        <svg viewBox="0 0 68 68" width="68" height="68" fill="none">
-          <circle cx="34" cy="34" r="33" fill="rgba(0,0,0,0.35)" stroke="#fff" stroke-width="2"/>
-          <path d="M27 20L48 34L27 48V20Z" fill="#fff"/>
-        </svg>
-      </button>
-    </div>
-
-    <div class="offer-card">
-      <span class="pill pill--accent offer-card__badge offer-card__badge--mobile">Цена снижена на 30%</span>
-
-      <div class="offer-card__title">
-        <p class="eyebrow">Годовая онлайн-программа</p>
-        <h1 class="display">МАСШТАБИРОВАНИЕ VIP</h1>
-        <p class="lede">Внедри систему управления, которая поможет увеличить обороты бизнеса <span class="pill pill--accent offer-card__badge offer-card__badge--desktop">Цена снижена на 30%</span></p>
-      </div>
-
-      <form class="lead-form" id="leadForm" novalidate>
-        <p class="lead-form__hint">Заполни форму. Куратор свяжется и расскажет подробнее.</p>
-
-        <div class="lead-form__fields">
-          <div class="field">
-            <input type="text" name="name" id="fieldName" placeholder="Имя" autocomplete="name" required>
-          </div>
-          <div class="field">
-            <input type="email" name="email" id="fieldEmail" placeholder="E-mail" autocomplete="email" required>
-          </div>
-          <div class="field">
-            <input type="tel" name="phone" id="fieldPhone" placeholder="+7 (900)000-00-00" autocomplete="tel" required>
-          </div>
-        </div>
-
-        <label class="consent">
-          <input type="checkbox" name="consent" id="fieldConsent" required>
-          <span class="consent__box" aria-hidden="true"></span>
-          <span class="consent__text">Соглашаюсь на рассылку от Алекса Яновского</span>
-        </label>
-
-        <button type="submit" class="btn btn--block" id="submitBtn">
-          <span class="btn__label">оставить заявку</span>
+  <header class="hero" id="top">
+    <div class="hero__inner">
+      <div class="video-cover" id="videoCover">
+        <img class="video-cover__poster" id="videoPoster" src="https://img.youtube.com/vi/fa-DIfjbbPg/maxresdefault.jpg"
+          onerror="this.onerror=null;this.src='https://img.youtube.com/vi/fa-DIfjbbPg/hqdefault.jpg';"
+          alt="Как захватить 50% рынка — видео Алекса Яновского">
+        <div class="video-cover__tint" aria-hidden="true"></div>
+        <button class="video-cover__play" id="playButton" type="button" aria-label="Смотреть видео">
+          <svg viewBox="0 0 68 68" width="68" height="68" fill="none">
+            <circle cx="34" cy="34" r="33" fill="rgba(0,0,0,0.35)" stroke="#fff" stroke-width="2" />
+            <path d="M27 20L48 34L27 48V20Z" fill="#fff" />
+          </svg>
         </button>
+      </div>
 
-        <input type="hidden" name="task" value="Контакты МБР+тренинг (ПК1)">
-        <input type="hidden" name="utm_source" id="utmSource">
-        <input type="hidden" name="utm_medium" id="utmMedium">
-        <input type="hidden" name="utm_campaign" id="utmCampaign">
-        <input type="hidden" name="utm_content" id="utmContent">
-        <input type="hidden" name="utm_term" id="utmTerm">
-      </form>
-    </div>
-  </div>
-</header>
+      <div class="offer-card">
+        <span class="pill pill--accent offer-card__badge offer-card__badge--mobile">Цена снижена на 30%</span>
 
-<div class="ticker" aria-hidden="true">
-  <div class="ticker__track">
-    <span class="ticker__item">✦ Уникальная возможность достижения быстрых и долгосрочных результатов в масштабировании</span>
-    <span class="ticker__item">✦ Уникальная возможность достижения быстрых и долгосрочных результатов в масштабировании</span>
-    <span class="ticker__item">✦ Уникальная возможность достижения быстрых и долгосрочных результатов в масштабировании</span>
-    <span class="ticker__item">✦ Уникальная возможность достижения быстрых и долгосрочных результатов в масштабировании</span>
-  </div>
-</div>
-
-<section class="offer-section">
-  <div class="offer-section__inner">
-    <h2 class="display offer-section__heading">
-      В честь своего Дня рождения Алекс Яновский дарит<br class="only-desktop">
-      бесплатный билет на участие в майском тренинге «Стратегия роста»
-    </h2>
-
-    <div class="offer-grid">
-
-      <div class="offer-grid__ticket">
-        <img class="ticket" src="assets/images/ticket.webp" width="870" height="337"
-          alt="Билет: тренинг Алекса Яновского «Как из малого бизнеса сделать большой». Место — Турция, Белек. Даты — 3–5 мая. Цена — €2718, бесплатно.">
-
-        <div class="badge-arrow">
-          <img class="badge-arrow__img" src="assets/images/arrow-label.webp" width="679" height="244"
-            alt="Только 47 билетов">
-          <span class="pill pill--outline badge-arrow__pill">Только 47 билетов</span>
+        <div class="offer-card__title">
+          <p class="eyebrow">Годовая онлайн-программа</p>
+          <h1 class="display">МАСШТАБИРОВАНИЕ VIP</h1>
+          <p class="lede">Внедри систему управления, которая поможет увеличить обороты бизнеса <span
+              class="pill pill--accent offer-card__badge offer-card__badge--desktop">Цена снижена на 30%</span></p>
         </div>
-      </div>
 
-      <div class="offer-grid__days">
-        <p class="section-lead">3 насыщенных дня активной работы, в результате которой:</p>
-        <ul class="check-list">
-          <li class="check-list__item"><img class="check-list__icon" src="assets/images/check.webp" width="43" height="43" alt="" aria-hidden="true">Определишь потенциал бизнес-модели и найдешь точки роста своего бизнеса</li>
-          <li class="check-list__item"><img class="check-list__icon" src="assets/images/check.webp" width="43" height="43" alt="" aria-hidden="true">Создашь прозрачную систему финансового учета и контроля</li>
-          <li class="check-list__item"><img class="check-list__icon" src="assets/images/check.webp" width="43" height="43" alt="" aria-hidden="true">Внедришь методику профессионального управления</li>
-          <li class="check-list__item"><img class="check-list__icon" src="assets/images/check.webp" width="43" height="43" alt="" aria-hidden="true">Научишься привлекать инвестиции и заключать выгодные партнерства</li>
-        </ul>
-      </div>
+        <form class="lead-form" id="leadForm" novalidate>
+          <p class="lead-form__hint">Заполни форму. Куратор свяжется и расскажет подробнее.</p>
 
-      <div class="offer-grid__perks">
-        <p class="section-lead">А также тебя ждет:</p>
-        <ul class="check-list">
-          <li class="check-list__item"><img class="check-list__icon" src="assets/images/check.webp" width="43" height="43" alt="" aria-hidden="true">Отдых с проживанием в шикарном отеле на берегу моря Calista Luxury Resort 5*</li>
-          <li class="check-list__item"><img class="check-list__icon" src="assets/images/check.webp" width="43" height="43" alt="" aria-hidden="true">Фееричный вечер с гало-ужином по случаю Дня рождения Алекса</li>
-        </ul>
-      </div>
-
-      <div class="offer-grid__gallery">
-        <div class="gallery" id="gallery">
-          <div class="gallery__track">
-            <div class="gallery__slides" id="galleryTrack">
-              <img class="gallery__slide" src="assets/images/gallery-1.webp" alt="Вечер в честь Дня рождения Алекса Яновского — конфетти и сцена">
-              <img class="gallery__slide" src="assets/images/gallery-2.webp" alt="Бассейн отеля Calista Luxury Resort с высоты птичьего полёта">
-              <img class="gallery__slide" src="assets/images/gallery-3.webp" alt="Награждение участников на сцене тренинга">
-              <img class="gallery__slide" src="assets/images/gallery-4.webp" alt="Бассейн у виллы отеля">
-              <img class="gallery__slide" src="assets/images/gallery-5.webp" alt="Живая музыка на вечере в честь Дня рождения">
-              <img class="gallery__slide" src="assets/images/gallery-6.webp" alt="Территория отеля Calista Luxury Resort в вечернее время">
+          <div class="lead-form__fields">
+            <div class="field">
+              <input type="text" name="name" id="fieldName" placeholder="Имя" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <input type="email" name="email" id="fieldEmail" placeholder="E-mail" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <input type="tel" name="phone" id="fieldPhone" placeholder="+7 (900)000-00-00" autocomplete="tel"
+                required>
             </div>
           </div>
-          <button class="gallery__arrow gallery__arrow--prev" id="galleryPrev" type="button" aria-label="Предыдущее фото">
-            <img src="assets/images/arrow-prev.webp" width="9" height="16" alt="">
+
+          <label class="consent">
+            <input type="checkbox" name="consent" id="fieldConsent" required>
+            <span class="consent__box" aria-hidden="true"></span>
+            <span class="consent__text">Соглашаюсь на рассылку от Алекса Яновского</span>
+          </label>
+
+          <button type="submit" class="btn btn--block" id="submitBtn">
+            <span class="btn__label">оставить заявку</span>
           </button>
-          <button class="gallery__arrow gallery__arrow--next" id="galleryNext" type="button" aria-label="Следующее фото">
-            <img src="assets/images/arrow-next.webp" width="9" height="16" alt="">
-          </button>
-          <div class="gallery__dots" id="galleryDots"></div>
+
+          <input type="hidden" name="task" value="Контакты МБР+тренинг (ПК1)">
+          <input type="hidden" name="utm_source" id="utmSource">
+          <input type="hidden" name="utm_medium" id="utmMedium">
+          <input type="hidden" name="utm_campaign" id="utmCampaign">
+          <input type="hidden" name="utm_content" id="utmContent">
+          <input type="hidden" name="utm_term" id="utmTerm">
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span class="ticker__item">✦ Уникальная возможность достижения быстрых и долгосрочных результатов в
+        масштабировании</span>
+      <span class="ticker__item">✦ Уникальная возможность достижения быстрых и долгосрочных результатов в
+        масштабировании</span>
+      <span class="ticker__item">✦ Уникальная возможность достижения быстрых и долгосрочных результатов в
+        масштабировании</span>
+      <span class="ticker__item">✦ Уникальная возможность достижения быстрых и долгосрочных результатов в
+        масштабировании</span>
+    </div>
+  </div>
+
+  <section class="offer-section">
+    <div class="offer-section__inner">
+      <h2 class="display offer-section__heading">
+        В честь своего Дня рождения Алекс Яновский дарит<br class="only-desktop">
+        бесплатный билет на участие в майском тренинге «Стратегия роста»
+      </h2>
+
+      <div class="offer-grid">
+
+        <div class="offer-grid__ticket">
+          <img class="ticket" src="assets/images/ticket.webp" width="870" height="337"
+            alt="Билет: тренинг Алекса Яновского «Как из малого бизнеса сделать большой». Место — Турция, Белек. Даты — 3–5 мая. Цена — €2718, бесплатно.">
+
+          <div class="badge-arrow">
+            <img class="badge-arrow__img" src="assets/images/arrow-label.webp" width="679" height="244"
+              alt="Только 47 билетов">
+            <span class="pill pill--outline badge-arrow__pill">Только 47 билетов</span>
+          </div>
         </div>
+
+        <div class="offer-grid__days">
+          <p class="section-lead">3 насыщенных дня активной работы, в результате которой:</p>
+          <ul class="check-list">
+            <li class="check-list__item"><img class="check-list__icon" src="assets/images/check.webp" width="43"
+                height="43" alt="" aria-hidden="true">Определишь потенциал бизнес-модели и найдешь точки роста своего
+              бизнеса</li>
+            <li class="check-list__item"><img class="check-list__icon" src="assets/images/check.webp" width="43"
+                height="43" alt="" aria-hidden="true">Создашь прозрачную систему финансового учета и контроля</li>
+            <li class="check-list__item"><img class="check-list__icon" src="assets/images/check.webp" width="43"
+                height="43" alt="" aria-hidden="true">Внедришь методику профессионального управления</li>
+            <li class="check-list__item"><img class="check-list__icon" src="assets/images/check.webp" width="43"
+                height="43" alt="" aria-hidden="true">Научишься привлекать инвестиции и заключать выгодные партнерства
+            </li>
+          </ul>
+        </div>
+
+        <div class="offer-grid__perks">
+          <p class="section-lead">А также тебя ждет:</p>
+          <ul class="check-list">
+            <li class="check-list__item"><img class="check-list__icon" src="assets/images/check.webp" width="43"
+                height="43" alt="" aria-hidden="true">Отдых с проживанием в шикарном отеле на берегу моря Calista Luxury
+              Resort 5*</li>
+            <li class="check-list__item"><img class="check-list__icon" src="assets/images/check.webp" width="43"
+                height="43" alt="" aria-hidden="true">Фееричный вечер с гало-ужином по случаю Дня рождения Алекса</li>
+          </ul>
+        </div>
+
+        <div class="offer-grid__gallery">
+          <div class="gallery" id="gallery">
+            <div class="gallery__track">
+              <div class="gallery__slides" id="galleryTrack">
+                <img class="gallery__slide" src="assets/images/gallery-1.webp"
+                  alt="Вечер в честь Дня рождения Алекса Яновского — конфетти и сцена">
+                <img class="gallery__slide" src="assets/images/gallery-2.webp"
+                  alt="Бассейн отеля Calista Luxury Resort с высоты птичьего полёта">
+                <img class="gallery__slide" src="assets/images/gallery-3.webp"
+                  alt="Награждение участников на сцене тренинга">
+                <img class="gallery__slide" src="assets/images/gallery-4.webp" alt="Бассейн у виллы отеля">
+                <img class="gallery__slide" src="assets/images/gallery-5.webp"
+                  alt="Живая музыка на вечере в честь Дня рождения">
+                <img class="gallery__slide" src="assets/images/gallery-6.webp"
+                  alt="Территория отеля Calista Luxury Resort в вечернее время">
+              </div>
+            </div>
+            <button class="gallery__arrow gallery__arrow--prev" id="galleryPrev" type="button"
+              aria-label="Предыдущее фото">
+              <img src="assets/images/arrow-prev.webp" width="9" height="16" alt="">
+            </button>
+            <button class="gallery__arrow gallery__arrow--next" id="galleryNext" type="button"
+              aria-label="Следующее фото">
+              <img src="assets/images/arrow-next.webp" width="9" height="16" alt="">
+            </button>
+            <div class="gallery__dots" id="galleryDots"></div>
+          </div>
+        </div>
+
+        <div class="offer-grid__cta">
+          <p class="display cta-text">
+            Предложение действительно до 30 апреля!<br class="only-desktop">
+            Оставляй заявку прямо сейчас<br class="only-desktop">
+            и узнай подробности.
+          </p>
+          <button type="button" class="btn btn--block js-scroll-to-form">
+            <span class="btn__label">оставить заявку</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__col">
+        <p class="site-footer__label">Служба поддержки:</p>
+        <a class="tg-button" href="https://t.me/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 20 20" width="20" height="20" fill="none">
+            <path
+              d="M18.4 2.6L1.9 9.2c-1.1.5-1.1 1.2-.2 1.5l4.2 1.3 1.6 5c.2.5.4.7.9.7.4 0 .6-.2.9-.5l2.1-2 4.4 3.2c.8.5 1.4.2 1.6-.7l2.9-13.7c.3-1.2-.4-1.7-1.3-1.4Zm-11 9.6-1.1-3.6 8.3-5.2c.3-.2.6 0 .4.3l-7.6 8.5Z"
+              fill="currentColor" />
+          </svg>
+          Telegram
+        </a>
+        <a class="site-footer__email" href="mailto:info@alexyanovsky.info">
+          <svg viewBox="0 0 20 20" width="18" height="18" fill="none">
+            <path
+              d="M2 5.5A1.5 1.5 0 0 1 3.5 4h13A1.5 1.5 0 0 1 18 5.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 2 14.5v-9Z"
+              stroke="currentColor" stroke-width="1.4" />
+            <path d="m3 5.5 7 5.5 7-5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+          info@alexyanovsky.info
+        </a>
       </div>
 
-      <div class="offer-grid__cta">
-        <p class="display cta-text">
-          Предложение действительно до 30 апреля!<br class="only-desktop">
-          Оставляй заявку прямо сейчас<br class="only-desktop">
-          и узнай подробности.
-        </p>
-        <button type="button" class="btn btn--block js-scroll-to-form">
-          <span class="btn__label">оставить заявку</span>
-        </button>
+      <div class="site-footer__col site-footer__col--end">
+        <a class="site-footer__link" href="#" id="contractLink">Дистанционный договор</a>
+        <p class="site-footer__copy">© <span id="copyYear">2026</span> ALEX YANOVSKY. ВСЕ ПРАВА ЗАЩИЩЕНЫ.</p>
       </div>
-
     </div>
-  </div>
-</section>
+  </footer>
 
-<footer class="site-footer">
-  <div class="site-footer__inner">
-    <div class="site-footer__col">
-      <p class="site-footer__label">Служба поддержки:</p>
-      <a class="tg-button" href="https://t.me/" target="_blank" rel="noopener">
-        <svg viewBox="0 0 20 20" width="20" height="20" fill="none"><path d="M18.4 2.6L1.9 9.2c-1.1.5-1.1 1.2-.2 1.5l4.2 1.3 1.6 5c.2.5.4.7.9.7.4 0 .6-.2.9-.5l2.1-2 4.4 3.2c.8.5 1.4.2 1.6-.7l2.9-13.7c.3-1.2-.4-1.7-1.3-1.4Zm-11 9.6-1.1-3.6 8.3-5.2c.3-.2.6 0 .4.3l-7.6 8.5Z" fill="currentColor"/></svg>
-        Telegram
-      </a>
-      <a class="site-footer__email" href="mailto:info@alexyanovsky.info">
-        <svg viewBox="0 0 20 20" width="18" height="18" fill="none"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h13A1.5 1.5 0 0 1 18 5.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 2 14.5v-9Z" stroke="currentColor" stroke-width="1.4"/><path d="m3 5.5 7 5.5 7-5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        info@alexyanovsky.info
-      </a>
-    </div>
-
-    <div class="site-footer__col site-footer__col--end">
-      <a class="site-footer__link" href="#" id="contractLink">Дистанционный договор</a>
-      <p class="site-footer__copy">© <span id="copyYear">2026</span> ALEX YANOVSKY. ВСЕ ПРАВА ЗАЩИЩЕНЫ.</p>
-    </div>
-  </div>
-</footer>
-
-<script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>
