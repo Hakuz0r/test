@@ -271,6 +271,13 @@ button {
   right: 71px;
 }
 
+@media (min-width: 981px) {
+  .offer-card__badge {
+  transform: scale(0.7);
+  transform-origin: top right;
+  }
+}
+
 .offer-card__title {
   display: flex;
   flex-direction: column;
