@@ -932,7 +932,7 @@ button {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 430px) {
   .offer-card__badge {
   position: static;
   align-self: flex-end;
