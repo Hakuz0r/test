@@ -271,6 +271,10 @@ button {
   right: 71px;
 }
 
+.offer-card__badge--mobile {
+  display: none;
+}
+
 @media (min-width: 981px) {
   .offer-card__badge {
   transform: scale(0.7);
@@ -704,6 +708,14 @@ button {
 @media (max-width: 980px) {
   .only-desktop {
   display: none;
+  }
+
+  .offer-card__badge--desktop {
+  display: none;
+  }
+
+  .offer-card__badge--mobile {
+  display: inline-flex;
   }
 
   .hero__inner {
