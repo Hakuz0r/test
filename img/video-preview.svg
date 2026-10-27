@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430">
+  <defs><radialGradient id="r" cx=".5" cy=".45" r=".7">
+    <stop offset="0" stop-color="#4b6d66"/><stop offset="1" stop-color="#16231f"/></radialGradient></defs>
+  <rect width="760" height="430" fill="url(#r)"/>
+  <g transform="translate(70 90) rotate(-25)"><rect width="70" height="200" rx="14" fill="#bfe3e6"/><rect x="12" y="60" width="46" height="60" fill="#fff" opacity=".8"/></g>
+  <g transform="translate(600 70) rotate(22)"><rect width="66" height="210" rx="14" fill="#f2c9b8"/><rect x="10" y="70" width="46" height="60" fill="#fff" opacity=".8"/></g>
+  <g transform="translate(150 260) rotate(-40)"><rect width="60" height="150" rx="14" fill="#cfc2ec"/></g>
+  <g transform="translate(560 270) rotate(30)"><rect width="56" height="140" rx="12" fill="#bfe8dc"/></g>
+  <text x="380" y="110" font-family="Arial Black, Arial" font-weight="900" font-size="40" fill="#f5d27a" text-anchor="middle">ТОП-10 SPF СРЕДСТВ</text>
+</svg>

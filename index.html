@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iHappy — магазин корейской косметики</title>
+  <meta name="description" content="Интернет-магазин корейской косметики iHappy: маски, патчи, сыворотки и уход за кожей. Бесплатная доставка от 3000 рублей.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== ВЕРХНЯЯ ПАНЕЛЬ ========== -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__delivery">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h11v9H3zM14 9h4l3 3v3h-7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="7" cy="17" r="1.8" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="17" r="1.8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span>Бесплатно от 3000 руб.</span>
+      </div>
+      <nav class="topbar__links" aria-label="Информация">
+        <a href="#">Оплата</a>
+        <a href="#">Доставка</a>
+        <a href="#">О компании</a>
+        <a href="#">Оптовикам</a>
+        <a href="#">Контакты</a>
+      </nav>
+      <form class="search" action="#" role="search">
+        <input class="search__input" type="search" name="q" placeholder="Поиск по каталогу" aria-label="Поиск по каталогу">
+        <button class="search__btn" type="submit" aria-label="Найти">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========== ШАПКА ========== -->
+  <header class="header">
+    <div class="container header__inner">
+      <button class="burger" type="button" aria-label="Открыть меню" data-menu-toggle>
+        <span></span><span></span><span></span>
+      </button>
+
+      <a class="logo" href="/">i<span>Happy</span></a>
+
+      <div class="phones">
+        <div class="phones__item">
+          <a class="phones__number" href="tel:88000000000">8(800)000-00-00</a>
+          <span class="phones__note">Бесплатно по России</span>
+        </div>
+        <div class="phones__item">
+          <a class="phones__number" href="tel:84952225533">8(495)222-55-33</a>
+          <span class="phones__note">Москва</span>
+        </div>
+      </div>
+
+      <div class="user">
+        <div class="user__auth" data-auth-guest>
+          <button class="btn-outline" type="button" data-modal-open="login">Вход</button>
+          <button class="btn-outline" type="button" data-modal-open="register">Регистрация</button>
+        </div>
+        <div class="user__auth user__auth--logged" data-auth-user hidden>
+          <span class="user__name">Привет, <b data-user-name></b>!</span>
+          <button class="btn-outline" type="button" data-logout>Выйти</button>
+        </div>
+        <a class="user__link" href="#">
+          <svg class="icon icon--star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>
+          <span>Избранные (<span data-fav-count>0</span>)</span>
+        </a>
+        <a class="user__link" href="#">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          <span>Вы недавно смотрели (3)</span>
+        </a>
+      </div>
+
+      <a class="cart" href="#">
+        <svg class="icon cart__icon" viewBox="0 0 24 24"><path d="M3 4h2.5l2.2 10.5h10.6L20.5 7H7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/><circle cx="9" cy="19" r="1.6" fill="currentColor"/><circle cx="17" cy="19" r="1.6" fill="currentColor"/></svg>
+        <span class="cart__body">
+          <span class="cart__title">Корзина</span>
+          <span class="cart__info"><span data-cart-count>0</span> шт. на <span data-cart-sum>0</span> руб.</span>
+        </span>
+      </a>
+    </div>
+
+    <!-- Главное меню -->
+    <div class="container">
+      <nav class="menu" data-menu aria-label="Каталог">
+        <ul class="menu__list">
+          <li><a class="menu__link" href="#">Лицо</a></li>
+          <li><a class="menu__link" href="#">Тело</a></li>
+          <li><a class="menu__link" href="#">Волосы</a></li>
+          <li><a class="menu__link" href="#">Аксессуары</a></li>
+          <li><a class="menu__link" href="#">Для мужчин</a></li>
+          <li><a class="menu__link" href="#">Бренды</a></li>
+          <li><a class="menu__link" href="#">Прочее</a></li>
+          <li class="menu__item--drop">
+            <button class="menu__link menu__drop-btn" type="button" aria-expanded="false" data-dropdown-toggle>
+              Акции
+              <svg class="icon icon--sm" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </button>
+            <ul class="menu__dropdown">
+              <li><a href="#">Скидки недели</a></li>
+              <li><a href="#">1+1 = 3</a></li>
+              <li><a href="#">Подарок к заказу</a></li>
+              <li><a href="#">Распродажа</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+
+      <!-- Хлебные крошки -->
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="/">Главная</a> <span>&gt;</span>
+      </nav>
+
+      <!-- ========== СЛАЙДЕР ========== -->
+      <section class="hero" data-slider aria-label="Акции и предложения">
+        <div class="hero__track">
+          <div class="hero__slide is-active">
+            <img class="hero__bg" src="img/slide-1.svg" alt="">
+            <div class="hero__content">
+              <h2 class="hero__title">Доставка</h2>
+              <p class="hero__text">Бесплатно при заказе от 3000 руб.</p>
+            </div>
+            <a class="hero__btn" href="#">Подробнее <span>&rsaquo;</span></a>
+          </div>
+          <div class="hero__slide">
+            <img class="hero__bg" src="img/slide-2.svg" alt="">
+            <div class="hero__content">
+              <h2 class="hero__title">Акция!</h2>
+              <p class="hero__text">Купи крем — получи тоник в подарок</p>
+            </div>
+            <a class="hero__btn" href="#">Подробнее <span>&rsaquo;</span></a>
+          </div>
+          <div class="hero__slide">
+            <img class="hero__bg" src="img/slide-3.svg" alt="">
+            <div class="hero__content">
+              <h2 class="hero__title">Новинки</h2>
+              <p class="hero__text">Скидка 20% на сыворотки</p>
+            </div>
+            <a class="hero__btn" href="#">Подробнее <span>&rsaquo;</span></a>
+          </div>
+          <div class="hero__slide">
+            <img class="hero__bg" src="img/slide-4.svg" alt="">
+            <div class="hero__content">
+              <h2 class="hero__title">Подарочные сертификаты</h2>
+              <p class="hero__text">Номиналом от 1000 до 10 000 руб.</p>
+            </div>
+            <a class="hero__btn" href="#">Подробнее <span>&rsaquo;</span></a>
+          </div>
+          <div class="hero__slide">
+            <img class="hero__bg" src="img/slide-5.svg" alt="">
+            <div class="hero__content">
+              <h2 class="hero__title">Оптовикам</h2>
+              <p class="hero__text">Специальные цены от 15 000 руб.</p>
+            </div>
+            <a class="hero__btn" href="#">Подробнее <span>&rsaquo;</span></a>
+          </div>
+        </div>
+        <button class="hero__arrow hero__arrow--prev" type="button" aria-label="Предыдущий слайд" data-slider-prev>&lsaquo;</button>
+        <button class="hero__arrow hero__arrow--next" type="button" aria-label="Следующий слайд" data-slider-next>&rsaquo;</button>
+        <div class="hero__dots" data-slider-dots></div>
+      </section>
+
+      <!-- ========== НОВИНКИ / ХИТЫ ========== -->
+      <div class="showcase">
+        <section class="products" data-carousel>
+          <h2 class="section-title">Новинки</h2>
+          <div class="products__viewport">
+            <div class="products__track" data-carousel-track>
+
+              <article class="product" data-product data-id="1" data-price="350">
+                <a class="product__img" href="#"><img src="img/p-aloe.svg" alt="Jeju Fresh Aloe Soothing Gel 99%"></a>
+                <span class="product__badge">new</span>
+                <div class="product__brand">The Saem</div>
+                <a class="product__name" href="#">Jeju Fresh Aloe Soothing Gel 99%</a>
+                <div class="product__bottom">
+                  <span class="product__price">350 руб.</span>
+                  <button class="product__fav" type="button" aria-label="В избранное" data-fav><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></button>
+                  <button class="product__cart" type="button" aria-label="В корзину" data-to-cart><svg viewBox="0 0 24 24"><path d="M3 4h2.5l2.2 10.5h10.6L20.5 7H7"/><circle cx="9" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></svg></button>
+                </div>
+              </article>
+
+              <article class="product" data-product data-id="2" data-price="1184">
+                <a class="product__img" href="#"><img src="img/p-mizon.svg" alt="Hyaluronic Acid 100"></a>
+                <span class="product__badge">new</span>
+                <div class="product__brand">Mizon</div>
+                <a class="product__name" href="#">Hyaluronic Acid 100</a>
+                <div class="product__bottom">
+                  <span class="product__price">1184 руб.</span>
+                  <button class="product__fav" type="button" aria-label="В избранное" data-fav><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></button>
+                  <button class="product__cart" type="button" aria-label="В корзину" data-to-cart><svg viewBox="0 0 24 24"><path d="M3 4h2.5l2.2 10.5h10.6L20.5 7H7"/><circle cx="9" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></svg></button>
+                </div>
+              </article>
+
+              <article class="product" data-product data-id="5" data-price="1590">
+                <a class="product__img" href="#"><img src="img/p-cosrx.svg" alt="Advanced Snail 96 Mucin Power Essence"></a>
+                <span class="product__badge">new</span>
+                <div class="product__brand">COSRX</div>
+                <a class="product__name" href="#">Advanced Snail 96 Mucin Power Essence</a>
+                <div class="product__bottom">
+                  <span class="product__price">1590 руб.</span>
+                  <button class="product__fav" type="button" aria-label="В избранное" data-fav><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></button>
+                  <button class="product__cart" type="button" aria-label="В корзину" data-to-cart><svg viewBox="0 0 24 24"><path d="M3 4h2.5l2.2 10.5h10.6L20.5 7H7"/><circle cx="9" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></svg></button>
+                </div>
+              </article>
+
+              <article class="product" data-product data-id="6" data-price="1790">
+                <a class="product__img" href="#"><img src="img/p-roundlab.svg" alt="Birch Juice Moisturizing Sun Cream SPF 50+"></a>
+                <span class="product__badge">new</span>
+                <div class="product__brand">Round Lab</div>
+                <a class="product__name" href="#">Birch Juice Moisturizing Sun Cream SPF 50+</a>
+                <div class="product__bottom">
+                  <span class="product__price">1790 руб.</span>
+                  <button class="product__fav" type="button" aria-label="В избранное" data-fav><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></button>
+                  <button class="product__cart" type="button" aria-label="В корзину" data-to-cart><svg viewBox="0 0 24 24"><path d="M3 4h2.5l2.2 10.5h10.6L20.5 7H7"/><circle cx="9" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></svg></button>
+                </div>
+              </article>
+
+            </div>
+          </div>
+          <button class="carousel-arrow carousel-arrow--prev" type="button" aria-label="Назад" data-carousel-prev>&lsaquo;</button>
+          <button class="carousel-arrow carousel-arrow--next" type="button" aria-label="Вперёд" data-carousel-next>&rsaquo;</button>
+        </section>
+
+        <section class="products" data-carousel>
+          <h2 class="section-title">Хиты</h2>
+          <div class="products__viewport">
+            <div class="products__track" data-carousel-track>
+
+              <article class="product" data-product data-id="3" data-price="1450">
+                <a class="product__img" href="#"><img src="img/p-aravia.svg" alt="Маска альгинатная Amyno-Lifting"></a>
+                <span class="product__badge product__badge--hit">хит</span>
+                <div class="product__brand">Aravia</div>
+                <a class="product__name" href="#">Маска альгинатная Amyno-Lifting</a>
+                <div class="product__bottom">
+                  <span class="product__price">1450 руб.</span>
+                  <button class="product__fav" type="button" aria-label="В избранное" data-fav><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></button>
+                  <button class="product__cart" type="button" aria-label="В корзину" data-to-cart><svg viewBox="0 0 24 24"><path d="M3 4h2.5l2.2 10.5h10.6L20.5 7H7"/><circle cx="9" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></svg></button>
+                </div>
+              </article>
+
+              <article class="product" data-product data-id="4" data-price="2100">
+                <a class="product__img" href="#"><img src="img/p-missha.svg" alt="Time Revolution The First Treatment Essence"></a>
+                <span class="product__badge product__badge--hit">хит</span>
+                <div class="product__brand">Missha</div>
+                <a class="product__name" href="#">Time Revolution The First Treatment Essence</a>
+                <div class="product__bottom">
+                  <span class="product__price">2100 руб.</span>
+                  <button class="product__fav" type="button" aria-label="В избранное" data-fav><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></button>
+                  <button class="product__cart" type="button" aria-label="В корзину" data-to-cart><svg viewBox="0 0 24 24"><path d="M3 4h2.5l2.2 10.5h10.6L20.5 7H7"/><circle cx="9" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></svg></button>
+                </div>
+              </article>
+
+              <article class="product" data-product data-id="7" data-price="690">
+                <a class="product__img" href="#"><img src="img/p-holika.svg" alt="Aloe 99% Soothing Gel"></a>
+                <span class="product__badge product__badge--hit">хит</span>
+                <div class="product__brand">Holika Holika</div>
+                <a class="product__name" href="#">Aloe 99% Soothing Gel</a>
+                <div class="product__bottom">
+                  <span class="product__price">690 руб.</span>
+                  <button class="product__fav" type="button" aria-label="В избранное" data-fav><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></button>
+                  <button class="product__cart" type="button" aria-label="В корзину" data-to-cart><svg viewBox="0 0 24 24"><path d="M3 4h2.5l2.2 10.5h10.6L20.5 7H7"/><circle cx="9" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></svg></button>
+                </div>
+              </article>
+
+              <article class="product" data-product data-id="8" data-price="890">
+                <a class="product__img" href="#"><img src="img/p-tonymoly.svg" alt="Peach Hand Cream"></a>
+                <span class="product__badge product__badge--hit">хит</span>
+                <div class="product__brand">Tony Moly</div>
+                <a class="product__name" href="#">Peach Hand Cream</a>
+                <div class="product__bottom">
+                  <span class="product__price">890 руб.</span>
+                  <button class="product__fav" type="button" aria-label="В избранное" data-fav><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></button>
+                  <button class="product__cart" type="button" aria-label="В корзину" data-to-cart><svg viewBox="0 0 24 24"><path d="M3 4h2.5l2.2 10.5h10.6L20.5 7H7"/><circle cx="9" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></svg></button>
+                </div>
+              </article>
+
+            </div>
+          </div>
+          <button class="carousel-arrow carousel-arrow--prev" type="button" aria-label="Назад" data-carousel-prev>&lsaquo;</button>
+          <button class="carousel-arrow carousel-arrow--next" type="button" aria-label="Вперёд" data-carousel-next>&rsaquo;</button>
+        </section>
+      </div>
+
+      <!-- ========== РЕКОМЕНДАЦИИ ПОКУПАТЕЛЕЙ ========== -->
+      <section class="reviews" data-carousel>
+        <h2 class="section-title">Рекомендации покупателей</h2>
+        <div class="products__viewport">
+          <div class="reviews__track" data-carousel-track>
+
+            <article class="review">
+              <img class="review__img" src="img/p-aravia.svg" alt="">
+              <div class="review__brand">Aravia</div>
+              <a class="review__product" href="#">Маска альгинатная с аргирелином Amyno-Lifting 550 мл</a>
+              <div class="review__meta">
+                <span>22.08.2025 20:31 / Эля</span>
+                <span class="stars" aria-label="Оценка 5 из 5"><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i></span>
+              </div>
+              <p class="review__text">Мы с сестрой очень довольны маской и уже посоветовали её всем подругам. Девочки тоже остались довольны, будем заказывать ещё. Кожа после неё подтянутая и сияющая!</p>
+              <a class="review__more" href="#">Читать далее</a>
+            </article>
+
+            <article class="review">
+              <img class="review__img" src="img/p-mizon.svg" alt="">
+              <div class="review__brand">Mizon</div>
+              <a class="review__product" href="#">Hyaluronic Acid 100</a>
+              <div class="review__meta">
+                <span>10.09.2025 14:12 / Марина</span>
+                <span class="stars" aria-label="Оценка 5 из 5"><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i></span>
+              </div>
+              <p class="review__text">Сыворотка лёгкая, быстро впитывается. Кожа увлажнённая весь день. Рекомендую для сухого типа кожи.</p>
+              <a class="review__more" href="#">Читать далее</a>
+            </article>
+
+            <article class="review">
+              <img class="review__img" src="img/p-aloe.svg" alt="">
+              <div class="review__brand">The Saem</div>
+              <a class="review__product" href="#">Jeju Fresh Aloe Soothing Gel 99%</a>
+              <div class="review__meta">
+                <span>05.07.2025 09:44 / Анна</span>
+                <span class="stars" aria-label="Оценка 4 из 5"><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i></i></span>
+              </div>
+              <p class="review__text">Гель универсальный — и для лица, и после загара. Приятная текстура, без липкости. Беру уже третий раз.</p>
+              <a class="review__more" href="#">Читать далее</a>
+            </article>
+
+            <article class="review">
+              <img class="review__img" src="img/p-missha.svg" alt="">
+              <div class="review__brand">Missha</div>
+              <a class="review__product" href="#">Time Revolution The First Treatment Essence</a>
+              <div class="review__meta">
+                <span>18.06.2025 18:05 / Ольга</span>
+                <span class="stars" aria-label="Оценка 5 из 5"><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i></span>
+              </div>
+              <p class="review__text">Пользуюсь второй месяц: тон лица выровнялся, поры стали менее заметны. Флакона хватает надолго.</p>
+              <a class="review__more" href="#">Читать далее</a>
+            </article>
+
+            <article class="review">
+              <img class="review__img" src="img/p-cosrx.svg" alt="">
+              <div class="review__brand">COSRX</div>
+              <a class="review__product" href="#">Advanced Snail 96 Mucin Power Essence</a>
+              <div class="review__meta">
+                <span>02.06.2025 11:27 / Ксения</span>
+                <span class="stars" aria-label="Оценка 5 из 5"><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i></span>
+              </div>
+              <p class="review__text">Отлично успокаивает кожу после пилингов. Текстура тянущаяся, но впитывается без следа.</p>
+              <a class="review__more" href="#">Читать далее</a>
+            </article>
+
+          </div>
+        </div>
+        <button class="carousel-arrow carousel-arrow--prev" type="button" aria-label="Назад" data-carousel-prev>&lsaquo;</button>
+        <button class="carousel-arrow carousel-arrow--next" type="button" aria-label="Вперёд" data-carousel-next>&rsaquo;</button>
+      </section>
+
+      <!-- ========== О МАГАЗИНЕ + ВОПРОСЫ ========== -->
+      <div class="info">
+        <div class="info__main">
+          <section class="about">
+            <h2 class="info-title">Магазин корейской косметики ihappy.ru</h2>
+            <p>Интернет-магазин ihappy.ru специализируется на корейской косметике: маски, патчи, сыворотки и уход за кожей. В ассортименте — проверенные бренды Tony Moly, Holika Holika, Missha, The Saem, Mizon, COSRX и другие.</p>
+            <p>Мы тщательно отбираем продукцию и работаем напрямую с поставщиками, чтобы предложить оригинальные средства по честным ценам. Бесплатная доставка при заказе от 3000 рублей.</p>
+            <p>Наши консультанты помогут подобрать уход под ваш тип кожи и ответят на вопросы о составе и применении средств.</p>
+          </section>
+
+          <section class="video">
+            <h2 class="info-title">Подписывайтесь на наш Rutube канал</h2>
+            <a class="video__player" href="https://rutube.ru/" target="_blank" rel="noopener">
+              <img src="img/video-preview.svg" alt="Превью видео: SPF хиты и новинки корейских брендов">
+              <span class="video__caption">SPF хиты и новинки корейских брендов</span>
+              <span class="video__play" aria-hidden="true"></span>
+              <span class="video__watch">Смотреть на RUTUBE</span>
+            </a>
+            <a class="btn-subscribe" href="https://rutube.ru/" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor"/><path d="M10 9l5 3-5 3z" fill="#e2574c"/></svg>
+              Подписаться
+            </a>
+          </section>
+        </div>
+
+        <aside class="qa" data-qa>
+          <h2 class="info-title">Вопросы специалисту</h2>
+
+          <div class="qa__item is-active" data-qa-item>
+            <div class="qa__question">
+              <div class="qa__head">
+                <span class="qa__author">Aisha</span>
+                <span class="qa__date">15 июля 2025</span>
+                <span class="qa__mark">?</span>
+              </div>
+              <p>Здравствуйте! Волосы очень тонкие и ломкие, быстро секутся на концах. Какие средства из корейской косметики вы посоветуете для укрепления и объёма?</p>
+            </div>
+            <div class="qa__answer">
+              <p>Здравствуйте, Aisha! Для тонких волос рекомендуем лёгкие несмываемые сыворотки и маски без силиконов. Обратите внимание на линейки с керамидами и протеинами.</p>
+              <a class="qa__more" href="#">Читать полностью &gt;</a>
+            </div>
+          </div>
+
+          <div class="qa__item" data-qa-item>
+            <div class="qa__question">
+              <div class="qa__head">
+                <span class="qa__author">Виктория</span>
+                <span class="qa__date">2 августа 2025</span>
+                <span class="qa__mark">?</span>
+              </div>
+              <p>Подскажите, можно ли использовать кислотные тонеры летом и с каким SPF их сочетать?</p>
+            </div>
+            <div class="qa__answer">
+              <p>Здравствуйте, Виктория! Можно, но лучше вечером и не каждый день. Утром обязательно наносите крем с SPF 50+ и обновляйте его каждые 2–3 часа на солнце.</p>
+              <a class="qa__more" href="#">Читать полностью &gt;</a>
+            </div>
+          </div>
+
+          <div class="qa__item" data-qa-item>
+            <div class="qa__question">
+              <div class="qa__head">
+                <span class="qa__author">Дмитрий</span>
+                <span class="qa__date">20 сентября 2025</span>
+                <span class="qa__mark">?</span>
+              </div>
+              <p>Ищу простой уход для мужской кожи, склонной к жирности. С чего начать?</p>
+            </div>
+            <div class="qa__answer">
+              <p>Здравствуйте, Дмитрий! Базовый набор: мягкая пенка для умывания, тонер с центеллой и лёгкий гель-крем. Раз в неделю — маска с глиной.</p>
+              <a class="qa__more" href="#">Читать полностью &gt;</a>
+            </div>
+          </div>
+
+          <div class="qa__nav">
+            <button class="qa__arrow" type="button" aria-label="Предыдущий вопрос" data-qa-prev>&lt;</button>
+            <div class="qa__pages" data-qa-pages></div>
+            <button class="qa__arrow" type="button" aria-label="Следующий вопрос" data-qa-next>&gt;</button>
+            <button class="qa__all" type="button" data-qa-all>Показать все</button>
+          </div>
+
+          <button class="ask-btn" type="button" data-modal-open="question">
+            <span class="ask-btn__mark">?</span>
+            <span class="ask-btn__text">Задать<br>вопрос</span>
+          </button>
+        </aside>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ========== ПОДВАЛ ========== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <h3 class="footer__title">Покупателям</h3>
+        <ul class="footer__list">
+          <li><a href="#">Доставка и оплата</a></li>
+          <li><a href="#">Помощь</a></li>
+          <li><a href="#">Подарочные сертификаты</a></li>
+          <li><a href="#">Акции</a></li>
+          <li><a href="#">Публичная оферта</a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Пресса о нас</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__title">Компания</h3>
+        <ul class="footer__list">
+          <li><a href="#">О компании</a></li>
+          <li><a href="#">Оптовые продажи</a></li>
+          <li><a href="#">Партнерская программа</a></li>
+          <li><a href="#">Реквизиты</a></li>
+          <li><a href="#">Политика конфиденциальности</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+        <a class="footer__market" href="#">Мы на&nbsp;маркетплейсах</a>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__title">Контакты</h3>
+        <ul class="footer__list footer__list--plain">
+          <li><a href="tel:88000000000">8-800-000-00-00 (Москва)</a></li>
+          <li>Будни: с 9:00 до 21:00</li>
+          <li>Выходные: с 11:00 до 20:00</li>
+        </ul>
+        <div class="payments">
+          <img src="img/pay-visa.svg" alt="Visa">
+          <img src="img/pay-mir.svg" alt="Мир">
+          <img src="img/pay-mc.svg" alt="Mastercard">
+          <img src="img/pay-sbp.svg" alt="СБП">
+        </div>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__title footer__title--italic">Присоединяйтесь</h3>
+        <div class="socials">
+          <a class="socials__link" href="#" aria-label="ВКонтакте">vk</a>
+          <a class="socials__link" href="#" aria-label="Одноклассники">ok</a>
+          <a class="socials__link" href="#" aria-label="Rutube">rt</a>
+          <a class="socials__link" href="#" aria-label="Telegram">tg</a>
+        </div>
+        <form class="subscribe" action="#" data-subscribe novalidate>
+          <input class="subscribe__input" type="email" name="email" placeholder="Ваш e-mail" aria-label="Ваш e-mail">
+          <button class="btn btn--block btn--round" type="submit">Подписаться</button>
+          <p class="subscribe__msg" data-subscribe-msg></p>
+        </form>
+      </div>
+    </div>
+    <div class="footer__copy">
+      <div class="container">© 2026 iHappy — магазин корейской косметики</div>
+    </div>
+  </footer>
+
+  <!-- Боковая вкладка консультанта -->
+  <button class="consultant" type="button" data-modal-open="question">Ваш консультант</button>
+
+  <!-- Кнопка наверх -->
+  <button class="to-top" type="button" aria-label="Наверх" data-to-top>
+    <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <!-- Уведомление -->
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+  <!-- ========== МОДАЛКИ ========== -->
+  <div class="modal" data-modal="login" aria-hidden="true">
+    <div class="modal__overlay" data-modal-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="login-title">
+      <button class="modal__close" type="button" aria-label="Закрыть" data-modal-close></button>
+      <h2 class="modal__title" id="login-title">Вход</h2>
+      <form class="form" data-form="login" novalidate>
+        <label class="form__field">
+          <span class="form__label">Email</span>
+          <input class="form__input" type="email" name="email" autocomplete="email" required>
+          <span class="form__error"></span>
+        </label>
+        <label class="form__field">
+          <span class="form__label">Пароль</span>
+          <input class="form__input" type="password" name="password" autocomplete="current-password" required minlength="6">
+          <span class="form__error"></span>
+        </label>
+        <div class="form__links">
+          <button class="form__link" type="button" data-modal-open="register">Регистрация</button>
+          <a class="form__link" href="#">Восстановить пароль</a>
+        </div>
+        <button class="btn btn--block" type="submit">Войти</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" data-modal="register" aria-hidden="true">
+    <div class="modal__overlay" data-modal-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="register-title">
+      <button class="modal__close" type="button" aria-label="Закрыть" data-modal-close></button>
+      <h2 class="modal__title" id="register-title">Регистрация</h2>
+      <form class="form" data-form="register" novalidate>
+        <label class="form__field">
+          <span class="form__label">Имя</span>
+          <input class="form__input" type="text" name="name" autocomplete="given-name" required minlength="2">
+          <span class="form__error"></span>
+        </label>
+        <label class="form__field">
+          <span class="form__label">Email</span>
+          <input class="form__input" type="email" name="email" autocomplete="email" required>
+          <span class="form__error"></span>
+        </label>
+        <label class="form__field">
+          <span class="form__label">Пароль</span>
+          <input class="form__input" type="password" name="password" autocomplete="new-password" required minlength="6">
+          <span class="form__error"></span>
+        </label>
+        <label class="form__field">
+          <span class="form__label">Подтверждение пароля</span>
+          <input class="form__input" type="password" name="password2" autocomplete="new-password" required data-match="password">
+          <span class="form__error"></span>
+        </label>
+        <button class="btn btn--block" type="submit">Зарегистрироваться</button>
+        <p class="form__switch">Уже есть аккаунт? <button class="form__link" type="button" data-modal-open="login">Войти</button></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" data-modal="question" aria-hidden="true">
+    <div class="modal__overlay" data-modal-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="question-title">
+      <button class="modal__close" type="button" aria-label="Закрыть" data-modal-close></button>
+      <h2 class="modal__title" id="question-title">Вопрос специалисту</h2>
+      <form class="form" data-form="question" novalidate>
+        <label class="form__field">
+          <span class="form__label">Имя</span>
+          <input class="form__input" type="text" name="name" required minlength="2">
+          <span class="form__error"></span>
+        </label>
+        <label class="form__field">
+          <span class="form__label">Email</span>
+          <input class="form__input" type="email" name="email" required>
+          <span class="form__error"></span>
+        </label>
+        <label class="form__field">
+          <span class="form__label">Ваш вопрос</span>
+          <textarea class="form__input form__textarea" name="message" rows="4" required minlength="10"></textarea>
+          <span class="form__error"></span>
+        </label>
+        <button class="btn btn--block" type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
